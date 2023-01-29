@@ -1,0 +1,23 @@
+{
+  "name": "hindigarv-chrome-extension",
+  "version": "2.0.0",
+  "description": "",
+  "main": "content-script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hindigarv/chrome-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hindigarv/chrome-extension/issues"
+  },
+  "homepage": "https://github.com/hindigarv/chrome-extension#readme",
+  "dependencies": {
+    "nukta-remover": "^0.0.1",
+    "regex-val-gen": "^0.0.2"
+  }
+}
