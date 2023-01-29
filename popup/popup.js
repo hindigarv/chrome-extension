@@ -34,9 +34,9 @@ const showWords = words => {
 
 const find = (word) => {
     window.close()
-    send({
+    sendToContentScript({
         from: "popup",
-        subject: "FindWord",
+        subject: "findWord",
         word: word
     })
 }

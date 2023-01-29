@@ -77,9 +77,7 @@ const updateBadge = () => {
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
     if (msg.from === "popup" && msg.subject === "getWords") {
         response(Array.from(words))
+    } else if (msg.from === "popup" && msg.subject === "findWord") {
+        window.find(msg.word)
     }
-    // else if (msg.from === "popup" && msg.subject === "FindWord") {
-    //     word = msg.word;
-    //     window.find(word)
-    // }
 });
