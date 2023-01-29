@@ -1,12 +1,16 @@
 # chrome-extension
 
 
-## Local Development
-
 ### How to install on local chrome
- 
-Follow [these instructions](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
 
+- run `npm install`
+ 
+- Follow [these instructions](https://developer.chrome.com/docs/extensions/mv3/getstarted/development-basics/#load-unpacked)
+
+
+## How to deploy on Chrome web store
+
+- TODO  
 
 
 ## TODO
