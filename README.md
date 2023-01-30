@@ -9,7 +9,14 @@
 
 
 ## How to deploy on Chrome web store
-- TODO  
+- Run `make zip`. It will create `package.zip` file 
+- Go to [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole) 
+  - Select `हिन्दी गर्व` 
+  - Navigate to `Build -> Package`
+  - Click on `Upload new package` button
+  - Upload the `package.zip` file
+  - Navigate to `Build -> Store listing`
+  - Click on `Submit for review` button
 
 
 ## TODO
