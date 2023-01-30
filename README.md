@@ -9,10 +9,16 @@
 
 
 ## How to deploy on Chrome web store
-
 - TODO  
 
 
 ## TODO
-
 - use maskable icons
+
+
+## Versions
+
+### 2.0.0
+- Load data from Google Drive instead of hard coded csv file.
+### 2.1.0
+- Auto reload Google Drive file every day

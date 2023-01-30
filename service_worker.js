@@ -1,4 +1,4 @@
-import {shabdakosha} from "./hindigarv.js"
+import {shabdakosha, reloadShabdakosha} from "./hindigarv.js"
 
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
     if (msg.from === "content" && msg.subject === "getShabdakosha") {
@@ -10,5 +10,17 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             tabId: sender.tab.id,
             text: text
         });
+    }
+});
+
+
+const MINUTES_IN_A_DAY = 1440;
+chrome.alarms.create(
+    "reloadShabdakosha",
+    {delayInMinutes: MINUTES_IN_A_DAY, periodInMinutes: MINUTES_IN_A_DAY}
+);
+chrome.alarms.onAlarm.addListener((alarm) => {
+    if (alarm.name === "reloadShabdakosha") {
+        reloadShabdakosha();
     }
 });

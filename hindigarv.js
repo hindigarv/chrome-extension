@@ -51,9 +51,14 @@ const initShabdakosha = (csvContent) => {
     isShabdakoshaReady = true;
 }
 
-fetch(url)
-    .then(response => response.text())
-    .then(text => initShabdakosha(text))
+
+const reloadShabdakosha = () => {
+    fetch(url)
+        .then(response => response.text())
+        .then(text => initShabdakosha(text))
+}
+
+reloadShabdakosha()
 
 
-export {isShabdakoshaReady, shabdakosha}
+export {isShabdakoshaReady, shabdakosha, reloadShabdakosha}
