@@ -46,6 +46,7 @@ const scan = (element) => {
         if (isTextNode(node)) {
             for (let word of find(shabdakosha, node.nodeValue)) {
                 words.add(word);
+                updateBadge();
             }
         } else if (node.childNodes.length > 0) {
             scan(node);  // Not a text node or leaf, so check it's children
@@ -56,7 +57,7 @@ const scan = (element) => {
 let observer = new MutationObserver(mutations => {
     for (let mutation of mutations) {
         for (let addedNode of mutation.addedNodes) {
-            scan(addedNode)
+            scan(addedNode);
         }
     }
     updateBadge()
